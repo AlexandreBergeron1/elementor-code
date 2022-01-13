@@ -1,0 +1,51 @@
+/*placeholder spacing*/
+selector form.elementor-form .elementor-field-group-email input, .elementor-field-group-name input, .elementor-field-group-phone input, .elementor-field-group-message textarea{
+    padding-left: 50px;
+}
+
+/*Icon box settings*/
+selector form.elementor-form .elementor-field-group-email::after, .elementor-field-group-name::after, .elementor-field-group-phone::after, .elementor-field-group-message::after {
+    position: absolute;
+    left: 5px;
+    top: 28px;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    content: "";
+    z-index: 99;
+}
+
+/*Icon size & position settings*/
+selector form.elementor-form .elementor-field-group-email::before, .elementor-field-group-name::before, .elementor-field-group-phone::before, .elementor-field-group-message::before  {
+    position: absolute;
+    left: 16px;
+    top: 34px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    color: #fff;
+    z-index: 999;
+    font-size: 17px;
+}
+
+/*Name field*/
+selector .elementor-field-group-name::before{
+    content: "\f007"
+}
+
+/*Email field*/
+selector form.elementor-form .elementor-field-group-email::before{
+   content: "\f0e0";
+}
+
+
+/*Phone field*/
+selector .elementor-field-group-phone::before{
+    content: "\f095"
+}
+
+/*Message field*/
+selector .elementor-field-group-message::before{
+    content: "\f27a"
+}
