@@ -1,0 +1,6 @@
+function child_enqueue_styles() {
+	
+	wp_deregister_style('astra-theme-css');
+	wp_enqueue_style( 'astra-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'), 'all' );
+
+}
