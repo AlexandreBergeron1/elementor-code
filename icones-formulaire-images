@@ -1,0 +1,53 @@
+/*Espace du placeholder*/
+selector form.elementor-form .elementor-field-group-email input, .elementor-field-group-name input, .elementor-field-group-phone input, .elementor-field-group-message textarea{
+    padding-left: 50px;
+}
+
+/*Position et grosseur des icônes*/
+selector form.elementor-form .elementor-field-group-email::before, .elementor-field-group-name::before, .elementor-field-group-phone::before, .elementor-field-group-message::before  {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    content: "";
+}
+
+
+
+/*Champ nom*/
+selector .elementor-field-group-name::before{
+    background-image: url("https://dev-nettoyeurstlouis.flywheelsites.com/wp-content/uploads/2022/01/contact_icone_1.png");
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size:100%;
+}
+
+
+/*Champ téléphone*/
+selector .elementor-field-group-phone::before{
+    background-image: url("https://dev-nettoyeurstlouis.flywheelsites.com/wp-content/uploads/2022/01/contact_icone_2.png");
+    content: "";
+    top:-1px;
+    width: 25px;
+    height: 28px;
+    background-size:100%;
+}
+
+/*Champ courriel*/
+selector form.elementor-form .elementor-field-group-email::before{
+    content: "";
+   background-image: url("https://dev-nettoyeurstlouis.flywheelsites.com/wp-content/uploads/2022/01/contact_icone_3.png");
+    width: 30px;
+    height: 20px;
+    background-size:100%;
+}
+
+/*Champ message*/
+selector .elementor-field-group-message::before{
+    background-image: url("https://dev-nettoyeurstlouis.flywheelsites.com/wp-content/uploads/2022/01/contact_icone_4.png");
+    content: "";
+    top:-2px;
+    width: 28px;
+    height: 21px;
+    background-size:100%;
+}
