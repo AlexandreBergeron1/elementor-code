@@ -1,6 +1,24 @@
+<?php
+/**
+ * Gauvin Immoblier Child Theme functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package Gauvin Immoblier Child
+ * @since 1.0.0
+ */
+
+/**
+ * Define Constants
+ */
+define( 'CHILD_THEME_GAUVIN_IMMOBLIER_CHILD_VERSION', 'gauvin-immoblier-child-theme-css' );
+
+/**
+ * Enqueue styles
+ */
 function child_enqueue_styles() {
-	
-	wp_deregister_style('astra-theme-css');
-	wp_enqueue_style( 'astra-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'), 'all' );
+	wp_enqueue_style( 'gauvin-immoblier-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'), 'all' );
 
 }
+
+add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
