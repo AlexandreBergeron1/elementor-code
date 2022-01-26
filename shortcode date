@@ -1,0 +1,5 @@
+function example ($atts) { 
+	return date("Y");
+}
+
+add_shortcode("year", "example");
