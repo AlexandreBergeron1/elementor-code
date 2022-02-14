@@ -1,3 +1,5 @@
+//utiliser avec [year] dans un text editor sur Elementor
+
 function example ($atts) { 
 	return date("Y");
 }
