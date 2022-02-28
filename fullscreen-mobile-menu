@@ -1,7 +1,7 @@
 /* 1. Add to the fullscreen mobile section a class named "fullscreen-menu" */
 /* 2. Add to the icon that opens the fullscreen menu a class named "open-button" */
 
-/* 3. Put this code in your CSS stylesheet */
+/* 3. Put this code in your CSS stylesheet --> will make the menu disappear but appear when clicking the menu icon + code for close button (X) */
 
 .fullscreen-menu {
     position: fixed;
@@ -20,6 +20,21 @@
 .fullscreen-menu.opening{
     transform: translateY(0);
     opacity: 1;
+}
+
+.close-button {
+    width: 100px !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    cursor: pointer !important;
+    z-index: 2;
+}
+@media (max-width: 767px){
+    .close-button {
+        transform: scale(0.7);
+        transform-origin: top right;
+    }
 }
 
 
@@ -55,3 +70,68 @@ $('.open-button a').on('click', function(e){
     e.preventDefault()
 })
 </script>
+
+/* 5. Create a close button (X). Add an inner section, delete one column, insert a divider, stylize it (45px for the width, 4px for the weight, color of 
+your choice, align center), make it at position absolute, make the vertical offset to 33, rotate it 45 degree (and -45 degree for the other one) and duplicate it*/
+
+/* 6. Go to the inner section and give it a minimum height of 100px. Add class of "close-buttom" to the element. */
+
+/* 7. To put the X button at the top right corner of the screen : go to the section (the parent) and set it to fullwidth, column position to stretch, and go 
+to column and make the vertical */
+
+/* BONUS : Underline menu items on hover */
+
+/* Give to the nav menu widget a class of "links-fullscreen-menu" and add this CSS. You can also add vertical padding and space between so the line doesn't
+cross the word. You can also change the color of the underline. It's normal if it doesn't work at first, you need to add the fullscreen-menu class to 
+the main section. */
+
+.links-fullscreen-menu {
+    --underline-color: #333333;
+}
+
+.links-fullscreen-menu a {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.links-fullscreen-menu.elementor-element a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--underline-color) !important;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: left !important;
+    opacity: 1 !important;
+}
+
+.links-fullscreen-menu a:hover::after{
+    transform: scaleX(1);
+}
+.links-fullscreen-menu li{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.links-fullscreen-menu.open li{
+    opacity: 1;
+}
+.links-fullscreen-menu li:nth-child(1){
+    transition-delay: 0s;
+}
+
+.links-fullscreen-menu li:nth-child(2){
+    transition-delay: 50ms;
+}
+.links-fullscreen-menu li:nth-child(3){
+    transition-delay: 100ms;
+}
+.links-fullscreen-menu li:nth-child(4){
+    transition-delay: 150ms;
+}
+.links-fullscreen-menu li:nth-child(5){
+    transition-delay: 200ms;
+}
