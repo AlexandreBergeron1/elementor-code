@@ -137,3 +137,12 @@ the main section. */
 .links-fullscreen-menu li:nth-child(5){
     transition-delay: 200ms;
 }
+
+.icon-fade {
+    transition: all 0.5s;
+    opacity: 0;
+    transition-delay: 300ms;
+}
+.icon-fade .open{
+    opacity: 1;
+}
