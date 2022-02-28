@@ -138,6 +138,7 @@ the main section. */
     transition-delay: 200ms;
 }
 
+/* Add fade to icon */
 .icon-fade {
     transition: all 0.5s;
     opacity: 0;
