@@ -85,6 +85,8 @@ to column and make the vertical */
 cross the word. You can also change the color of the underline. It's normal if it doesn't work at first, you need to add the fullscreen-menu class to 
 the main section. */
 
+/* Note : doesn't quite work with submenus */
+
 .links-fullscreen-menu {
     --underline-color: #333333;
 }
