@@ -1,0 +1,57 @@
+/* 1. Add to the fullscreen mobile section a class named "fullscreen-menu" */
+/* 2. Add to the icon that opens the fullscreen menu a class named "open-button" */
+
+/* 3. Put this code in your CSS stylesheet */
+
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: all 0.5s !important;
+    opacity: 0;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.fullscreen-menu.opening{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* 4. Put this code in a HTML widget in your fullscreen mobile section above your nav menu */
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var $ = jQuery
+
+$(document).ready(function(){
+
+var menu = $('.fullscreen-menu, .fullscreen-menu .elementor-element')
+
+$('.open-button').on('click', function(){
+    menu.addClass('opening')
+    setTimeout(function(){
+        menu.addClass('open')
+    },500)
+})
+
+function closeMenu(){
+    menu.removeClass('opening')
+    setTimeout(function(){
+        menu.removeClass('open')
+    },500)
+}
+
+$('.close-button').on('click', closeMenu)
+$('.elementor-widget-nav-menu a').on('click', closeMenu)
+})
+$('.open-button a').on('click', function(e){
+    e.preventDefault()
+})
+</script>
