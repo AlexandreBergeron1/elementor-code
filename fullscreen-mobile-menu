@@ -144,6 +144,6 @@ the main section. */
     opacity: 0;
     transition-delay: 300ms;
 }
-.icon-fade .open{
+.icon-fade.open{
     opacity: 1;
 }
