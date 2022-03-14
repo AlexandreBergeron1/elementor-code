@@ -1,0 +1,8 @@
+.box {
+background-image: repeating-linear-gradient(0deg, #054e9f, #054e9f 14px, transparent 14px, transparent 30px, #054e9f 30px), repeating-linear-gradient(90deg, #054e9f, #054e9f 14px, transparent 14px, transparent 30px, #054e9f 30px), repeating-linear-gradient(180deg, #054e9f, #054e9f 14px, transparent 14px, transparent 30px, #054e9f 30px), repeating-linear-gradient(270deg, #054e9f, #054e9f 14px, transparent 14px, transparent 30px, #054e9f 30px);
+background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
+background-position: 0 0, 0 0, 100% 0, 0 100%;
+background-repeat: no-repeat;
+}
+
+/* CSS comes from this website : https://css-tricks.com/more-control-over-css-borders-with-background-image/ */
