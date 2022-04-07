@@ -1,0 +1,259 @@
+/* ====================================== Code HTML ====================================== */
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+</body>
+<!-- Flickity HTML init -->
+<div class="button-row">
+  <div class="button-group button-group--cells">
+    <button class="button is-selected">1</button>
+    <button class="button">2</button>
+    <button class="button">3</button>
+    <button class="button">4</button>
+  </div>
+</div>
+<br>
+<div class="carousel js-flickity" data-flickity='{ "pageDots": false }'>
+  <div class="carousel-cell">
+      <div class="flex_container">
+          <div class="flex_2">
+              <img src="https://dev-1cleanair.flywheelsites.com/wp-content/uploads/2022/02/duct-cleaning.jpg" alt="duct-cleaning" />
+      </div>
+      <div class="flex_2 flex_text">
+          <h3>Step 1</h3>
+          <p>Once the duct cleaning is done, we will carefully seal access holes in your main trunk line, put a new high-efficiency filter and will make a final inspection with before and after photos if requested.</p>
+      </div>
+      </div>
+  </div>
+  <div class="carousel-cell">
+      <div class="flex_container">
+          <div class="flex_2">
+              <img src="https://dev-1cleanair.flywheelsites.com/wp-content/uploads/2022/02/duct-cleaning.jpg" alt="duct-cleaning" />
+      </div>
+      <div class="flex_2 flex_text">
+          <h3>Step 2</h3>
+          <p>Once the duct cleaning is done, we will carefully seal access holes in your main trunk line, put a new high-efficiency filter and will make a final inspection with before and after photos if requested.</p>
+      </div>
+      </div>
+      </div>
+  <div class="carousel-cell">
+    <div class="flex_container">
+          <div class="flex_2">
+              <img src="https://dev-1cleanair.flywheelsites.com/wp-content/uploads/2022/02/duct-cleaning.jpg" alt="duct-cleaning" />
+      </div>
+      <div class="flex_2 flex_text">
+          <h3>Step 3</h3>
+          <p>Once the duct cleaning is done, we will carefully seal access holes in your main trunk line, put a new high-efficiency filter and will make a final inspection with before and after photos if requested.</p>
+      </div>
+      </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="flex_container">
+          <div class="flex_2">
+              <img src="https://dev-1cleanair.flywheelsites.com/wp-content/uploads/2022/02/duct-cleaning.jpg" alt="duct-cleaning" />
+      </div>
+      <div class="flex_2 flex_text">
+          <h3>Step 4</h3>
+          <p>Once the duct cleaning is done, we will carefully seal access holes in your main trunk line, put a new high-efficiency filter and will make a final inspection with before and after photos if requested.</p>
+      </div>
+      </div>
+      </div>
+  </div>
+</div>
+</body>
+
+/* ====================================== Code CSS ====================================== */
+* { box-sizing: border-box; }
+
+.carousel-cell {
+  width: 70%;
+  height: 300px;
+  margin-right: 250px;
+  border-radius: 25px;
+  background: #F2FAFD;
+  counter-increment: gallery-cell;
+}
+
+/* Tablet / Tablette - 768px to 1023px*/
+/* @media only screen and (max-width : 1023px) {
+	.flex_2 img {
+		object-fit: cover;
+		width: 340px;
+		height: 260px;
+	}
+} */
+
+/* Tablet Extra / Grande tablette - 1024px to 1439px */
+@media only screen and (max-width : 1439px) {
+    .flex_2 img {
+		object-fit: cover;
+		width: 410px;
+		height: 315px;
+	}
+	
+	.flex-container {
+		height: 300px !important;
+	}
+}
+
+/* Mobile Extra / Grand mobile - 425px to 767px */
+@media only screen and (max-width : 767px) {
+	.flex_2 {
+		width:100% !important;
+	}
+	
+	.flex_container {
+		flex-direction: column;
+	}
+	
+	.flickity-viewport, .carousel-cell, .flex_container {
+		height: 400px !important;
+	}
+	
+	.flex_2 img {
+		object-fit: cover;
+		height: 200px;
+		width: 600px;
+		margin-bottom: 25px;
+	}
+}
+@media only screen and (max-width : 563px) {
+    .flickity-viewport, .carousel-cell, .flex_container {
+		height: 450px !important;
+	}
+}
+
+@media only screen and (max-width : 490px) {
+    .flickity-viewport, .carousel-cell, .flex_container {
+		height: 475px !important;
+	}
+}
+
+
+/* Mobile - 320px to 424px*/
+@media only screen and (max-width : 440px) {
+    .flickity-viewport, .carousel-cell, .flex_container {
+		height: 495px !important;
+	}
+}
+
+@media only screen and (max-width : 360px) {
+    .flickity-viewport, .carousel-cell, .flex_container {
+		height: 505px !important;
+	}
+	
+	.carousel-cell {
+		width: 75%;
+	}
+}
+
+@media only screen and (max-width : 340px) {
+    .flickity-viewport, .carousel-cell, .flex_container {
+		height: 525px !important;
+	}
+}
+
+
+/* buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent !important;
+  opacity: 0.6;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: #27AAF2;
+}
+
+/* closer to edge */
+.flickity-prev-next-button.previous { left: 0; }
+.flickity-prev-next-button.next { right: 0; }
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+.flex_container {
+	display:flex;
+	height: 300px;
+	border-radius: 25px;
+	align-items: center;
+	overflow: hidden;
+}
+
+.flex_2 {
+	width:50%;
+}
+
+.flex_text {
+	padding: 0px 25px;
+}
+
+.flex_text h3 {
+	font-family: "Manrope", sans-serif;
+	font-size: 21px;
+	color: #27AAF2;
+	line-height: 1.3em;
+}
+
+
+.flex_text p {
+	font-family: "Manrope", sans-serif;
+	font-size: 14px;
+	color: #114579;
+	line-height: 1.7em;
+}
+
+.button {
+	display: inline-block;
+	background-color: transparent !important;
+	padding: 10px 22px !important;
+	font-size: 28px !important;
+	color: #114579 !important;
+	font-weight: 800;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button.is-selected {
+  color: #27AAF2 !important;
+}
+
+.flickity-button:focus {
+	box-shadow: none !important;
+}
+
+/* ====================================== JS CODE ====================================== */
+jQuery( document ).ready(function() {
+	var $carousel = jQuery('.carousel').flickity({
+		prevNextButtons: false,
+		pageDots: false
+	});
+	// Flickity instance
+	var flkty = $carousel.data('flickity');
+	// elements
+	var $cellButtonGroup = jQuery('.button-group--cells');
+	var $cellButtons = $cellButtonGroup.find('.button');
+
+	// update selected cellButtons
+	$carousel.on( 'select.flickity', function() {
+		$cellButtons.filter('.is-selected')
+			.removeClass('is-selected');
+		$cellButtons.eq( flkty.selectedIndex )
+			.addClass('is-selected');
+	});
+
+	// select cell on button click
+	$cellButtonGroup.on( 'click', '.button', function() {
+		var index = jQuery(this).index();
+		$carousel.flickity( 'select', index );
+	});
+});
