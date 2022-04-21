@@ -1,0 +1,39 @@
+/* Ajouter une classe "main_header" à la section du menu */
+/* Code basé sur Arcade Mobile ----------> arcademobile.com */
+
+.main_header .elementor-nav-menu--dropdown {
+	position: fixed !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	background-color: rgb(18, 20, 91) !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main_header .elementor-nav-menu--dropdown ul {
+	margin-right: auto;
+}
+
+.main_header .elementor-nav-menu--dropdown ul li {
+	margin: 35px 0px;
+}
+
+.main_header .elementor-nav-menu--dropdown ul li:not(.cta_button) a {
+	color: #ffffff !important;
+	background-color: transparent !important;
+	font-size: 26px !important;
+}
+
+.main_header .elementor-nav-menu--dropdown ul .cta_button a {
+	color: #ffffff !important;
+	padding: 20px 15px !important;
+	font-size: 24px !important;
+}
+
+
+.main_header .elementor-widget-nav-menu .elementor-menu-toggle {
+	z-index: 1 !important;
+}
