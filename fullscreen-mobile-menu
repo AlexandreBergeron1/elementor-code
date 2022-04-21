@@ -1,3 +1,5 @@
+/* ATTTENTION : LE CODE SUIVANT EST DÉSUET ET PAS BON DU TOUT. NE LE PRENDS QU'EN CAS DE DÉSESPOIR EXTRÊME */
+
 /* 1. Add to the fullscreen mobile section a class named "fullscreen-menu" */
 /* 2. Add to the icon that opens the fullscreen menu a class named "open-button" */
 
