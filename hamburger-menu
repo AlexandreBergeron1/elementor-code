@@ -45,6 +45,5 @@
 if (jQuery(window).width() < 1024) {
 	jQuery(".elementor-menu-toggle").click(function() {
 		jQuery('html, body').toggleClass("no-scroll");
-		alert("Lol");
 	});
 }
