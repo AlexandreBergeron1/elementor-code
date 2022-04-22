@@ -37,3 +37,14 @@
 .main_header .elementor-widget-nav-menu .elementor-menu-toggle {
 	z-index: 1 !important;
 }
+
+
+
+/* JQUERY - Empêcher le scroll lorsque le menu est ouvert */
+
+if (jQuery(window).width() < 1024) {
+	jQuery(".elementor-menu-toggle").click(function() {
+		jQuery('html, body').toggleClass("no-scroll");
+		alert("Lol");
+	});
+}
