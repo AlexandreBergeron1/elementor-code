@@ -1,0 +1,20 @@
+/* Manual hover underline with only CSS. */
+
+/* Complete code here : https://codepen.io/toianw/pen/YqEqrz. */
+
+li > a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  bottom: 5px;
+  background: transparent;
+  transition: all 0.3s;
+  
+}
+
+li > a:hover::after, li > a.active-nav::after {
+  width: 100%;
+  background: blue;
+}
